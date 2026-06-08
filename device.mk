@@ -97,5 +97,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Inherit from motocamera blobs
+$(call inherit-product-if-exists, vendor/motorola/motocamera/MotoCamera.mk)
+
 # Inherit from vendor blobs
 $(call inherit-product, vendor/motorola/fogos/fogos-vendor.mk)
